@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Signup Form -->
+        <div id="signup-form" class="form-container">
+            <h2>Sign Up</h2>
+            <div class="userinput">
+                <input type="text" id="signup-username" placeholder="Username" required />
+                <input type="password" id="signup-password" placeholder="Password" required />
+            </div>
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <span onclick="showLoginForm()">Login here</span></p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <div class="userinput">
+                <input type="text" id="login-username" placeholder="Username" required />
+                <input type="password" id="login-password" placeholder="Password" required />
+            </div>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <span onclick="showSignupForm()">Sign Up here</span></p>
+        </div>
+
+        <!-- Expense Tracker (Visible after login) -->
+        <div class="expende-container">
+            <div id="expense-tracker" style="display: none;">
+                <h2>Welcome, <span id="welcome-username"></span>!</h2>
+                <h3>Expense Tracker</h3>
+                <div class="user">
+                    <input type="text" id="expense-description" placeholder="Expense Description" />
+                    <input type="number" id="expense-amount" placeholder="Amount" />
+                    <button onclick="addExpense()">Add Expense</button>
+                </div>
+
+                <h4>Your Expenses:</h4>
+                <div class="ul">
+                    <ul id="expense-list"></ul>
+                </div>
+                <button onclick="logout()">Logout</button>
+
+                <button id="delete" onclick="del()">delete</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

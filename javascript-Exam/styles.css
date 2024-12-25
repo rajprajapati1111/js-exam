@@ -1,0 +1,195 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h2,
+h3,
+h4,
+p {
+    color: #2345d8;
+    font-family: 'Arial', sans-serif;
+}
+
+button {
+    background-color: #00b4d8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0077b6;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: blue;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #00b4d8;
+}
+
+span {
+    color: #00b4d8;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Expense Tracker */
+.expende-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.expende-container input {
+    width: 90%;
+    max-width: 350px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.expende-container ul {
+    list-style-type: none;
+    width: 90%;
+    max-width: 350px;
+    margin-top: 20px;
+    padding: 0;
+    /* border: 1px solid black; */
+
+}
+
+.ul {
+    width: 370px;
+    height: 189px;
+    /* border: 1px solid black; */
+    overflow-y: scroll;
+
+}
+
+.ul::-webkit-scrollbar {
+    display: none;
+}
+
+
+.user {
+    margin-top: 10px;
+}
+
+.expende-container ul li {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #333;
+    margin-left: 35px;
+    box-sizing: border-box;
+}
+
+
+
+.expende-container ul li span {
+    color: #00b4d8;
+    font-weight: bold;
+}
+
+/* Buttons Section */
+button#delete {
+    background-color: #e63946;
+    width: 96px;
+    height: 41px;
+}
+
+button#delete:hover {
+    background-color: #d62828;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Transition Effects */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .expende-container input {
+        width: 100%;
+    }
+}
